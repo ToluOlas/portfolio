@@ -1,0 +1,238 @@
+body {
+  background: #0f1630;
+  color: #fff;
+  padding: 25px;
+  /* font-family: sans-serif; */
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif; /* For body text */
+}
+
+/*sticky header*/
+header {
+  position: sticky;
+  top: 0; 
+  z-index: 1000;
+  background-color: #0f1630; 
+  padding: 1rem 0; 
+  border-bottom: 2px solid #fff; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* separator bars */
+nav,
+section {
+  border-block-end: 2px solid #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  justify-content: center; /* Centers the menu for mobile */
+}
+
+header nav li {
+  display: inline;
+  margin-inline-start: 1rem;
+}
+
+header nav li a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.profile-img {
+  width: 320px;
+  margin-inline-end: 4rem;
+  
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+  padding-block-end: 4rem;
+}
+
+.bio .profile-img {
+  margin-inline-end: 4rem;
+  width: 320px;
+  min-width: 320px;
+  background: #888;
+  border-radius: 120px; 
+}
+
+@media (max-width: 1024px) {
+  .bio {
+    flex-direction: column
+  }
+}
+
+.button {
+  text-decoration: none;
+  color: #ffffff;
+  background: #1348DA;
+  padding: 0 1rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 1.25rem;
+}
+
+.project {
+  padding-block-end: 3rem;
+}
+
+article {
+  display: flex;
+  padding: 3rem 0;
+}
+
+article strong {
+  font-style: italic;
+  font-weight: 600;
+}
+
+article h3 {
+  margin-block-start: 0;
+}
+
+article a {
+  font-weight: 700;
+  padding: 2rem 0;
+}
+
+article li {
+  margin-block-end: 0.5rem;
+}
+
+article .article-img {
+  width: 512px;
+  min-width: 512px;
+  margin-inline-start: 2rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  article {
+    flex-direction: column;
+  }
+  article .article-img {
+    width: 100%;
+    min-width: 100%;
+    margin-inline-start: 0;
+    margin-block-start: 0rem;
+  }
+
+  .game-img{
+    margin-inline-start: 0;
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+.game-img {
+  width: 320px;
+  min-width: 320px;
+  margin-inline-start: 2rem;
+  margin-inline-end: 2rem;
+}
+
+.example-img {
+  display: block;
+  margin: 0 auto 2rem auto; 
+  max-width: 512px; 
+  height: auto; 
+  border-radius: 8px; 
+}
+
+.example-txt {
+  text-align: center;
+  margin-top: 0rem;
+  font-size: 1rem; 
+  color: #fff; 
+}
+
+/* Timeline Section */
+.timeline {
+  display: flex;
+  margin: 2rem 0;
+  align-items: center;
+}
+
+.timeline-img {
+  width: 300px;
+  height: 150px;
+  margin-right: 2rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.timeline div {
+  max-width: 600px;
+}
+
+.timeline h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.timeline ul li {
+  margin: 0.5rem 0;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap; /* Allow skills to wrap onto the next line */
+  gap: 0.5rem; /* Space between skills */
+  margin-top: 1rem;
+}
+
+.skill {
+  text-decoration: none;
+  color: #ffffff;
+  background: #1348DA;
+  padding: 0 1rem;
+  height: 2.0rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 1.20rem;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+/* Default Skill (Blue Background) */
+.skill.default {
+  background: #1348DA;
+}
+
+/* New Skill (Gold Background) */
+.skill.new {
+  background: #cc8b33;
+  color: #fff; /* Darker text for better contrast */ 
+}
+
+/* Mixed Skill (Split Background: Gold and Blue) */
+.skill.mixed {
+  background: linear-gradient(to right, #cc8b33 50%, #1348DA 50%);
+  color: #fff; /* Ensure text contrast is consistent */
+}
+
